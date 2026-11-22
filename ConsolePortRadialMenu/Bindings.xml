@@ -1,0 +1,3 @@
+<Bindings>
+	<Binding name="CLICK ConsolePortRadialMenu:LeftButton" header="CPRADIALMENU"/>
+</Bindings>

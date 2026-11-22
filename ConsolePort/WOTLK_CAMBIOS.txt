@@ -1,0 +1,74 @@
+ConsolePort WotLK 2.2 (primera versión pública; mismo código que 0.2.7)
+=======================
+ - Panel "Acerca de": créditos a Sebastian Lindfors (Munk, addon original), leoaviana (port a WotLK 3.3.5a, v1.5) y Kenshín (ConsolePort WotLK 2.2). Enlace al repositorio github.com/JKENSRIDAL/ConsolePortWotLK-3.3.5a.
+ - WoWpadX: se mantiene el crédito y el enlace de leoaviana.
+ - Donaciones: texto en español e inglés en el panel; la ventana muestra solo el título, el QR (180 px, en un marco fijo) y debajo dos opciones, Yape (Perú) y PayPal (QR generados en el juego). El panel de información queda un poco más abajo.
+ - Versión 2.2 y nombre "Console Port WotLK" en la lista de addons.
+Archivos: ConsolePort/Frames/About.lua, Config/Controls.lua, Frames/Config.lua, Locale/enUS.lua; .toc
+
+ConsolePort WotLK 0.2.7
+=======================
+ - Barra: al pulsar un botón ya no aparece un cuadro negro. La textura de pulsado de los bordes biselados no tiene transparencia y ahora se dibuja en modo aditivo, como en retail.
+Archivos: ConsolePortBar/Core/Wrapper.lua
+
+ConsolePort WotLK 0.2.6
+=======================
+ - Mini-botones: los iconos ya no se salen del marco. La máscara vuelve a la proporción del base (38/46 del marco) y usa 32 franjas en vez de 16 para que los bordes no se vean escalonados.
+Archivos: ConsolePortBar/Core/SliceMask.lua
+
+ConsolePort WotLK 0.2.5
+=======================
+ - Barra: quitado el aro cian que aparecía sobre todos los botones con hechizo. Era la marca de "acción nueva", que este base mostraba siempre; 3.3.5a no tiene esa función.
+ - Mini-botones (LT, RT, LT+RT): marco a 58/46 del botón y máscara del icono del mismo tamaño, como en retail; separación de LT+RT igual a retail. Ya no se ven finos ni separados del botón principal.
+Archivos: ConsolePortBar/Libs/ActionButton.lua, Core/Wrapper.lua, Core/SliceMask.lua
+
+ConsolePort WotLK 0.2.4
+=======================
+ - Teclado radial: con un teclado físico o virtual, Enter envía el mensaje, Retroceso y Supr borran (manteniéndolas pulsadas repiten) y Esc cancela, igual que en el chat normal. Antes el teclado radial se tragaba esas teclas.
+Archivos: ConsolePortKeyboard/Core/Keyboard.lua
+
+ConsolePort WotLK 0.2.3
+=======================
+ - Arte del cluster 1.25 veces más grande, centrado en los botones, con resplandor tenue del color de la clase (texturas nuevas Textures/Covers/Glow1-3). Opción para quitarlo en la configuración de la barra.
+ - "Use beveled borders" ahora funciona (antes la opción no cambiaba nada): el botón principal usa el aro grueso del núcleo, como el estilo "Beveled" de retail. Activado por defecto.
+ - Preset Midnight: es la disposición predeterminada (personajes nuevos y botón "Default" de la ventana de atajos); el mapeo LT = Shift, RT = Ctrl, P1 = Alt se aplica solo la primera vez.
+Archivos: ConsolePortBar/Core/Lookup.lua, Bar.lua, Wrapper.lua; ConsolePortBar/Textures/Covers/Glow1-3.blp (nuevos); ConsolePortPresetMidnight/Preset.lua
+
+ConsolePort WotLK 0.2.2
+=======================
+ - Barra: con mando Xbox / Xbox Elite, los botones LT y RT (CP_T3/CP_T4) no se muestran si no tienen tecla propia, porque son los modificadores Shift y Ctrl.
+ - Barra: arte de clase del cluster y "mostrar todos los botones" activados por defecto (y una vez en configuraciones ya guardadas).
+ - Anillo de utilidad: la primera vez se pregunta si se abre con LT+RT+A o P1+LT+RT+A. Comando nuevo /cpuring para cambiarlo.
+ - Preset Midnight (/cpmidnight): ya no pregunta; usa la combinación elegida.
+Archivos: ConsolePortBar/Core/Bar.lua, Lookup.lua; ConsolePort/Frames/UtilityRingSetup.lua (nuevo), ConsolePort.toc; ConsolePortPresetMidnight/Preset.lua
+
+ConsolePort WotLK 0.2.1
+=======================
+Corregido: las monturas y mascotas del anillo de utilidad no se invocaban.
+ - En 3.3.5a son "compañeros" y no se lanzan por ID de hechizo; ahora se invocan con CallCompanion.
+ - Las añadidas desde el selector del anillo conservan su marca de montura; las guardadas en 0.2.0 se corrigen solas.
+ - Al cambiar de anillo se copia también la marca de montura.
+ - Con montura activa, el mismo botón desmonta; con mascota fuera, la retira.
+Nuevo (Preset Midnight): /cpmidnight pregunta si el anillo de utilidad va en LT+RT+A o en P1+LT+RT+A.
+Archivos modificados:
+ ConsolePort/Frames/Utility.lua, ConsolePort/Drivers/Radial.lua, ConsolePort/Config/Ring.lua
+ ConsolePortPresetMidnight/Preset.lua
+
+ConsolePort WotLK 0.2.0 (sobre ConsolePortLK base)
+====================================================
+Nuevo: ALT como tercer modificador (M3), igual que la retail.
+ - 8 combinaciones por botón: solo, Shift, Ctrl, Ctrl+Shift, Alt, Alt+Shift, Alt+Ctrl, Alt+Ctrl+Shift.
+ - La barra cambia de "página" al mantener ALT: el botón principal y los mini-botones muestran la capa ALT.
+ - La ventana de atajos muestra las 8 filas en orden fijo.
+ - El stick sigue funcionando en los anillos con ALT pulsado.
+ - Se desactiva la tecla de autolanzamiento (SELFCAST) si estaba en ALT.
+Archivos modificados:
+ ConsolePort/Config/Lookup.lua, Binds.lua, Hotkey.lua
+ ConsolePort/Init/Theme.lua, ConsolePort/Drivers/Radial.lua
+ ConsolePortBar/Core/Bar.lua, Wrapper.lua, Libs/ActionButton.lua, Components/MenuBar.lua
+ ConsolePortAdvanced/Browser.lua
+Para volver atrás: reinstala ConsolePortLK BASE.zip.
+
+Autor de ConsolePort WotLK: Kenshín
+Créditos: addon original de Sebastian Lindfors (Munk); port a 3.3.5a (ConsolePortLK) de Leandro Araujo Viana (leoaviana).
+Licencia: Artistic License 2.0 (ver LICENSE.md). Esta es una versión modificada; los cambios se listan arriba.

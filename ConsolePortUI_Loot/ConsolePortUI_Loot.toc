@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: Console Port |cff739BD0WotLK|r |cff69ccf0UI|r Loot
+## Notes: Replaces loot frame.
+## RequiredDeps: ConsolePort
+## Author: Kenshín
+## X-Credits: Addon original: Sebastian Lindfors (Munk). Port a 3.3.5a (ConsolePortLK): Leandro Araujo Viana (leoaviana) - github.com/leoaviana/ConsolePortLK
+## X-Project: ConsolePort WotLK 2.2
+
+Frame.xml

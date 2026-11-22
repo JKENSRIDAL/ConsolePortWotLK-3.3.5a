@@ -1,0 +1,19 @@
+## Interface: 30300
+## Title: Console Port |cff739BD0WotLK|r |cff69ccf0Keyboard|r
+## Notes: Keyboard extension for Console Port.
+## SavedVariables: ConsolePortKeyboardLayout, ConsolePortKeyboardDictionary
+## RequiredDeps: ConsolePort
+## DefaultState: disabled
+## Author: Kenshín
+## X-Credits: Addon original: Sebastian Lindfors (Munk). Port a 3.3.5a (ConsolePortLK): Leandro Araujo Viana (leoaviana) - github.com/leoaviana/ConsolePortLK
+## X-Project: ConsolePort WotLK 2.2
+
+Languages\Languages.xml
+
+Core\Keyboard.lua
+Core\Dictionary.lua
+Core\AutoComplete.lua
+Core\Mime.lua
+Core\Charset.lua
+Core\Update.lua
+Core\Config.lua

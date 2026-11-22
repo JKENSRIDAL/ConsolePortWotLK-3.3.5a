@@ -1,0 +1,13 @@
+## Interface: 30300
+## Title: Console Port |cff739BD0WotLK|r |cff69ccf0Menú Radial|r
+## Notes: Menú de juego radial con arte de clase (estilo ConsolePort retail) para 3.3.5a.
+## Version: 0.1.0
+## RequiredDeps: ConsolePort
+## SavedVariables: ConsolePortRadialMenuDB
+## Author: Kenshín
+## X-Credits: Addon original: Sebastian Lindfors (Munk). Port a 3.3.5a (ConsolePortLK): Leandro Araujo Viana (leoaviana) - github.com/leoaviana/ConsolePortLK
+## X-Project: ConsolePort WotLK 2.2
+
+Locale.lua
+Data.lua
+RadialMenu.lua

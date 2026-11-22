@@ -1,0 +1,29 @@
+## Interface: 30300
+## Title: Console Port |cff739BD0WotLK|r |cff69ccf0Action Bar|r
+## Notes: Action bar extension for Console Port
+## SavedVariables: ConsolePortBarManifest
+## SavedVariablesPerCharacter: ConsolePortBarSetup
+## RequiredDeps: ConsolePort
+## Author: Kenshín
+## X-Credits: Addon original: Sebastian Lindfors (Munk). Port a 3.3.5a (ConsolePortLK): Leandro Araujo Viana (leoaviana) - github.com/leoaviana/ConsolePortLK
+## X-Project: ConsolePort WotLK 2.2
+
+Frame.xml
+
+Libs\ButtonGlow.lua
+Libs\ActionButton.lua
+
+Core\SliceMask.lua
+Core\Divider.lua
+Core\Lookup.lua
+Core\Wrapper.lua
+Core\Bar.lua
+Core\Config.lua
+
+Custom\Blizzard.lua
+Custom\ConsolePort.lua
+
+Components\Pet.lua
+Components\MenuBar.lua
+Components\WatchBars.xml
+Components\ActionbarPlacer.lua
